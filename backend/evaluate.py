@@ -30,7 +30,7 @@ GOLDEN_DATASET = [
         "note": "Tricky: Heavy technical terminology (RAM, instances, throttling) but ultimately a billing/quota issue."
     },
     {
-        "query": "Your stupid app keeps crashing when I click the invoice button. Fix it or I want a refund!",
+        "query": "Your app keeps crashing when I click the invoice button. Fix it or I want a refund!",
         "expected_category": "Both",
         "note": "Tricky: App crash (Technical) + Refund (Billing)."
     },

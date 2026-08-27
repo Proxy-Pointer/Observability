@@ -174,9 +174,9 @@ function App() {
             </strong>
           </div>
           <div className="metric-pill">
-            <span>Total Tokens:</span>
+            <span>Avg Tokens:</span>
             <strong>
-              {metrics.total_tokens_used != null ? metrics.total_tokens_used.toLocaleString() : '---'}
+              {metrics.avg_tokens != null ? Math.round(metrics.avg_tokens).toLocaleString() : '---'}
             </strong>
           </div>
         </div>

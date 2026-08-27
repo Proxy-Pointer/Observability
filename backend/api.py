@@ -47,7 +47,9 @@ def get_overall_metrics():
         FROM agent_spans
     """)
     tokens = cursor.fetchone()
-    overall["total_tokens_used"] = tokens["total_tokens_used"] if tokens and tokens["total_tokens_used"] else 0
+    total_tokens = tokens["total_tokens_used"] if tokens and tokens["total_tokens_used"] else 0
+    total_traces = overall.get("total_traces", 0)
+    overall["avg_tokens"] = (total_tokens / total_traces) if total_traces > 0 else 0
     
     conn.close()
     return overall
