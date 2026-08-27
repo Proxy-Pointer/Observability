@@ -64,6 +64,8 @@ flowchart TD
     linkStyle default font-size:14px,font-weight:bold;
 ```
 
+> **Note:** Refer to [Production-Grade Observability for AI Agents: A Minimal-Code, Configuration-First Approach](https://towardsdatascience.com/production-grade-observability-for-ai-agents-a-minimal-code-configuration-first-approach/) to know more.
+
 ---
 
 ## 📁 Project Structure
