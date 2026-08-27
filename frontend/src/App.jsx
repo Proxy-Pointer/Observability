@@ -146,7 +146,7 @@ function App() {
           </button>
         </div>
         <div className="header__status">
-          <div style={{color: 'var(--text-muted)', fontSize: '12px', fontWeight: 'bold', marginRight: '8px', display: 'flex', alignItems: 'center'}}>
+          <div style={{color: '#ffffff', fontSize: '12px', fontWeight: 'bold', marginRight: '8px', marginLeft: '24px', display: 'flex', alignItems: 'center'}}>
             SESSION AVERAGES:
           </div>
           <div className="metric-pill">
@@ -165,6 +165,18 @@ function App() {
             <span>Conciseness:</span>
             <strong style={{ color: metrics.avg_conciseness <= 3 ? 'var(--error)' : 'inherit' }}>
               {metrics.avg_conciseness != null ? `${metrics.avg_conciseness.toFixed(1)}/5` : '---'}
+            </strong>
+          </div>
+          <div className="metric-pill">
+            <span>Avg Latency:</span>
+            <strong>
+              {metrics.avg_latency != null ? `${metrics.avg_latency.toFixed(2)}s` : '---'}
+            </strong>
+          </div>
+          <div className="metric-pill">
+            <span>Total Tokens:</span>
+            <strong>
+              {metrics.total_tokens_used != null ? metrics.total_tokens_used.toLocaleString() : '---'}
             </strong>
           </div>
         </div>
