@@ -1,0 +1,72 @@
+:root {
+  --bg-base:      #07091a;
+  --bg-surface:   #0c1128;
+  --bg-elevated:  #101830;
+  --bg-card:      #141f3a;
+  --bg-hover:     #1a2848;
+  --border:        rgba(99, 102, 241, 0.12);
+  --border-bright: rgba(99, 102, 241, 0.35);
+  --border-focus:  rgba(99, 102, 241, 0.7);
+  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 60%, #06b6d4 100%);
+  --accent-a: #6366f1;
+  --accent-b: #8b5cf6;
+  --accent-c: #06b6d4;
+  --text-primary:   #ffffff;
+  --text-secondary: #d0d0d0;
+  --text-muted:     #787878;
+  --success: #10b981;
+  --error:   #f43f5e;
+  --warning: #f59e0b;
+  --info:    #38bdf8;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; min-height: 100vh; }
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(99,102,241,0.25); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(99,102,241,0.5); }
+button { cursor: pointer; font-family: var(--font-sans); border: none; outline: none; }
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 500; transition: all 0.18s ease; white-space: nowrap; }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn-primary { background: var(--accent-gradient); color: #fff; box-shadow: 0 4px 20px rgba(99,102,241,0.3); }
+.btn-primary:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 28px rgba(99,102,241,0.5); }
+.btn-ghost { background: transparent; color: #d0d0d0; border: 1px solid var(--border); }
+.btn-ghost:hover:not(:disabled) { border-color: var(--border-bright); color: #ffffff; background: var(--bg-elevated); }
+.btn-success { background: linear-gradient(135deg, #059669, #10b981); color: #fff; box-shadow: 0 4px 16px rgba(16,185,129,0.3); }
+.btn-success:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(16,185,129,0.45); }
+.btn-warning { background: linear-gradient(135deg, #d97706, #f59e0b); color: #fff; box-shadow: 0 4px 16px rgba(245,158,11,0.3); }
+.btn-warning:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(245,158,11,0.45); }
+.btn-danger { background: transparent; color: var(--error); border: 1px solid rgba(244,63,94,0.3); }
+.btn-danger:hover:not(:disabled) { background: rgba(244,63,94,0.1); border-color: var(--error); }
+.tag { display: inline-block; padding: 2px 9px; border-radius: 100px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; }
+.tag-code { background: rgba(150,150,150,0.15); color: #e0e0e0; }
+.tag-text { background: rgba(150,150,150,0.12);  color: #c0c0c0; }
+textarea, input { font-family: var(--font-sans); background: var(--bg-elevated); color: var(--text-primary); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 13px; resize: vertical; width: 100%; transition: border-color 0.18s; }
+textarea:focus, input:focus { outline: none; border-color: var(--border-focus); box-shadow: 0 0 0 3px rgba(99,102,241,0.12); }
+textarea { min-height: 80px; }
+pre, code { font-family: var(--font-mono); font-size: 12px; }
+pre { background: #060c1d; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; overflow: auto; line-height: 1.7; color: #e0e0e0; }
+.spinner { display: inline-block; width: 12px; height: 12px; border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Markdown Rendering Overrides for Compactness */
+.md-render p { margin-bottom: 0.5rem; line-height: 1.5; }
+.md-render p:last-child { margin-bottom: 0; }
+.md-render ol, .md-render ul { margin-top: 0.25rem; margin-bottom: 0.5rem; padding-left: 1.5rem; }
+.md-render li { margin-bottom: 0.25rem; }
+.md-render h1, .md-render h2, .md-render h3, .md-render h4, .md-render h5, .md-render h6 { margin-top: 0.5rem; margin-bottom: 0.25rem; }
