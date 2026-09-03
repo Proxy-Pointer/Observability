@@ -156,6 +156,17 @@ JUDGE_MODEL = "gemini-3.1-flash-lite"
 
 ---
 
-## 📄 License
+## Author
 
-MIT License
+**Partha Sarkar**
+
+## Contact
+
+- **GitHub Issues**: For bug reports.
+- **General Questions**: For general questions, ideas, and enhancement requests, reach out to me on [LinkedIn](https://www.linkedin.com/in/partha-sarkar-lets-talk-ai) or [Email](mailto:partha.sarkarx@gmail.com).
+
+---
+
+## License
+
+© 2026 Partha Sarkar. Licensed under [MIT](./LICENSE).
